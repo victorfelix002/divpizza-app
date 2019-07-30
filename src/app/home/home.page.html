@@ -1,17 +1,33 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      DIVPIZZA - Início
+      DIVPIZZA
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    <h4>Escolha uma pizza</h4>
+    <ion-searchbar></ion-searchbar>
     <br/><br/>
     <ion-card>
-        <img src="../assets/pizza1.jpg"/>
+      <ion-card-header>
+          <img src="../assets/pizza1.jpg"/>
+      </ion-card-header>
+        <ion-card-content>
+          <ion-card-title>
+            Pepperoni com queijo grudante
+          </ion-card-title>
+          <ion-card-subtitle>
+              Pepperoni, lombo, bastante queijo muçarela, cogumelos e um leve toque de azeite trufado e azeitonas.
+          </ion-card-subtitle>
+          <br/>
+          <br/>
+          <ion-button color='danger'>
+            <ion-icon name='cart' slot='start'></ion-icon>
+            Comprar
+          </ion-button>
+        </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
