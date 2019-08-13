@@ -10,10 +10,16 @@ export class HomePage {
 
   ionViewDidEnter() {
     console.log('EXECUTOU O VIEW DID ENTER');
-      this.catalogo.push({
-      nome: 'Pepperoni lombado com queijo grudante',
-      descricao: 'Pepperoni, lombo, bastante queijo muçarela, cogumelos e um leve toque de azeite trufado e azeitonas.',
-      preco: 'R$100,00'
-    })
+    this.listarCatalogo()
   }
+  listarCatalogo() {
+    const tamanhodoBanco = localStorage.length
+    for(let i = 0; i < tamanhodoBanco; i++){
+      const chaveAtual = localStorage.key(i)
+      const pizzaString = localStorage.getItem(chaveAtual)
+      const pizzaObjeto = JSON.parse(pizzaString)
+      this.catalogo.push(pizzaObjeto)
+    }
+  }
+
 }
